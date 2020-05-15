@@ -1,0 +1,24 @@
+[package]
+name = "wordpass"
+version = "0.1.0"
+authors = ["paulpr0 <github@pr0.co.uk>"]
+description = "A simple utility which generates (long) passwords using words at random from a provided dictionary"
+edition = "2018"
+license = "MIT"
+
+[lib]
+name = "lib_wordpass"
+path = "src/lib.rs"
+
+[[bin]]
+name = "wordpass"
+path = "src/main.rs"
+required-features = ["build-binary"]
+
+[dependencies]
+rand = "0.7"
+Inflector = "0.11"
+argh = {version = "0.1", optional = true}
+
+[features]
+build-binary = ["argh"]
