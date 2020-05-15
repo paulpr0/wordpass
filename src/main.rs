@@ -5,21 +5,13 @@ use std::fs::File;
 use argh::{FromArgs};
 
 use lib_wordpass::{get_word_list, get_default_filename, generate_password};
-/// Features: word pass can have spaces, capitals at the start or for each word.
+/// Features: Passwords can have spaces, a single capital at the start or for each word.
 /// The min words and min length can be configured
-/// The results can be printed or copied to the clipboard
-/// Constant strings can pe pre or appended
-/// A number can be included (fixed or variable),
-/// as can a special char from a list (with sensible default)
 ///
-/// It will use a config in ~/.config/wordpass/config if such a config exists
-///
-/// All options can be specified in config file or as cmd line options
+/// It will use a config in $XDG_CONFIG_HOME/wordpass/config or /usr/share/dict/words if such a config exists
 ///
 ///
 #[derive(FromArgs, Clone)]
-/// Read from stdin, chunk and write back out again.
-/// After a set delay, write out anything which is queued
 struct Opts {
     /// minimum number of words in the password. Default is 4
     #[argh(option, short='w', default = "4")]
