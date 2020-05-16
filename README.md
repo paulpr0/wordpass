@@ -3,9 +3,12 @@ Generate (long) passwords using random words from a provided dictionary
 
 A simple tool to generate passwords using words from a supplied dictionary. 
 ```
-Usage: ./target/debug/wordpass [-w <min-word-count>] [-l <min-letter-count>] [-S] [-i] [-c] [-d <dictionary-file>] [--do-not-filter]
+Usage: wordpass [-w <min-word-count>] [-l <min-letter-count>] [-S] [-i] [-c] [-d <dictionary-file>] [--do-not-filter]
 
-Features: Passwords can have spaces, a single capital at the start or for each word. The min words and min length can be configured It will use a config in $XDG_CONFIG_HOME/wordpass/config or /usr/share/dict/words if such a config exists
+Features: 
+    Passwords can have spaces, a single capital at the start or for each word. 
+    The min words and min length can be configured 
+    It will use a dictionary in $XDG_CONFIG_HOME/wordpass/words.txt or /usr/share/dict/words if none is provided as an argument
 
 Options:
   -w, --min-word-count

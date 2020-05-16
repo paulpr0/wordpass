@@ -5,6 +5,9 @@ authors = ["paulpr0 <github@pr0.co.uk>"]
 description = "A simple utility which generates (long) passwords using words at random from a provided dictionary"
 edition = "2018"
 license = "MIT"
+repository = "https://github.com/paulpr0/wordpass"
+homepage = "https://github.com/paulpr0/wordpass"
+readme = "README.md"
 
 [lib]
 name = "lib_wordpass"
